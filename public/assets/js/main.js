@@ -460,3 +460,24 @@ var swiper = new Swiper(".c-testimonials", {
     prevEl: ".c-testimonials__arrow-prev",
   },
 });
+
+// count
+
+$(".program_count").each(function () {
+  $(this)
+    .prop("counter", 0)
+    .animate(
+      {
+        counter: $(this).text(),
+      },
+      {
+        duration: 20000, // Increase the duration to slow it down
+
+        easing: "swing",
+
+        step: function (now) {
+          $(this).text(Math.ceil(now));
+        },
+      }
+    );
+});
