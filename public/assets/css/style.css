@@ -593,7 +593,8 @@ textarea:-ms-input-placeholder {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ffff;
+  background-color: purple;
+  background-image: url("/assets/images/animation\ compass\ web\ pre.gif");
   z-index: 999999;
 }
 
