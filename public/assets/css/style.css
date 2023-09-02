@@ -616,13 +616,13 @@ textarea:-ms-input-placeholder {
   height: 50px;
   border-radius: 50%;
   background-color: #000000;
-  -webkit-animation: preloader 1.3s linear infinite;
-  animation: preloader 1.3s linear infinite;
+  -webkit-animation: preloader 1s linear infinite;
+  animation: preloader 1s linear infinite;
 }
 
 #preloader .preloader span:last-child {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
 }
 
 @-webkit-keyframes preloader {
