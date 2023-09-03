@@ -14204,3 +14204,132 @@ ul li:hover {
     width: calc(11px * 3);
   }
 }
+/***** events page *****/
+.call-of-papers {
+  display: flex;
+  justify-content: center;
+}
+.call-of-papers img {
+  margin-top: 130px;
+  width: 400px;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .call-of-papers img {
+    margin-top: 120px;
+    width: 300px;
+    height: auto;
+  }
+}
+/***** End events page *****/
+
+/***** major themes *****/
+.major-items {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.major-items-desc {
+  color: #fff;
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: var(--font-Nutino);
+  font-style: normal;
+  font-weight: 300;
+}
+.major-items-desc ul li {
+  list-style-type: circle;
+  margin-left: 10px;
+}
+
+.major-glass-card {
+  position: relative;
+  margin-top: 40px;
+  width: 400px;
+  height: auto;
+  padding: 1.25rem;
+  /* 	background: rgba(22, 37, 41, 0.7); */
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(127, 73, 99, 0.6) 0,
+    rgba(34, 62, 76, 0.5) 100%
+  );
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(152, 152, 152, 0.18);
+  border-left: 1px solid rgba(43, 43, 43, 0.3);
+  border-bottom: 1px solid rgba(43, 43, 43, 0.3);
+  border-radius: 0.75rem;
+}
+.major-card-img img {
+  position: absolute;
+  left: 0px;
+  width: 200px;
+}
+.major-items-para p {
+  color: #fff;
+  text-align: justify;
+  font-family: var(--font-Nutino);
+  font-size: 19.5px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 130%; /* 32.5px */
+  margin-top: 50px;
+  width: 400px;
+  height: auto;
+}
+.events-title h1 {
+  width: 100%;
+  padding: 20px 0px;
+  color: #e59bff;
+  font-family: var(--font-fabulous);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.event-primary {
+  margin-bottom: 1.3em;
+  color: white;
+  border-radius: 18px;
+  border: 1px solid rgba(216, 216, 216, 0);
+  background: radial-gradient(
+    221.82% 106.55% at 15.38% 30.26%,
+    rgba(101, 42, 122, 0.44) 0%,
+    rgba(231, 66, 126, 0) 100%
+  );
+  backdrop-filter: blur(24.5px);
+}
+@media (max-width: 700px) {
+  .major-items {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .major-items-desc {
+    font-size: 14px;
+  }
+  .major-glass-card {
+    width: 100%;
+  }
+  .major-items-para p {
+    padding-top: 15px;
+    font-size: 14px;
+    font-weight: 200;
+    width: 90%;
+    margin: auto;
+  }
+  .events-title h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+/***** End major themes *****/
