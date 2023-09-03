@@ -30,8 +30,7 @@ router.post("/", async function (req, res, next) {
 
     // Save the registration data to the database
     await newRegistration.save();
-
-    return res.sendStatus(200);
+    return res.status(200).send("Successfully registered");
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });
