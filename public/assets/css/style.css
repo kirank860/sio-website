@@ -107,7 +107,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: "#000";
-  background-color: #000 !important;
+  background: #531768 !important;
 }
 
 body[dir="rtl"] {
@@ -2834,11 +2834,8 @@ label {
 .meeta-hero-section-3 {
   padding-top: 450px;
   padding-bottom: 400px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
-  z-index: 3;
+  z-index: 4;
 }
 
 .meeta-hero-section-3::before {
@@ -3037,8 +3034,10 @@ label {
 }
 
 @media only screen and (max-width: 991px) {
+  @media (max-width: 600px) {
+  }
   .meeta-hero-section-3 {
-    padding-top: 220px;
+    padding-top: 180px;
     padding-bottom: 150px;
   }
 
@@ -3059,7 +3058,7 @@ label {
 
 @media only screen and (max-width: 575px) {
   .meeta-hero-section-3 {
-    padding-bottom: 125px;
+    padding-bottom: 170px;
   }
 
   .meeta-hero-section-3 .meeta-countdown-wrap {
@@ -13601,10 +13600,8 @@ ul li:hover {
 .links,
 .address {
   flex: 1;
-  /* Equal distribution on extra-large screens (col-xl-4) */
   min-width: calc(25% - 30px);
-  /* Account for gap and distribute evenly */
-  color: #000;
+  color: #531768;
 }
 
 /* Responsive adjustments for screens below 700px */
@@ -13657,7 +13654,7 @@ ul li:hover {
   .last-section-footer {
     width: 100%;
     text-align: center;
-    color: #000 !important;
+    color: #531768 !important;
   }
 
   .privacy {
@@ -13727,7 +13724,7 @@ ul li:hover {
 }
 .about-sio-title {
   text-align: center;
-  color: #ff4a8c;
+  color: white;
   font-family: var(--font-fabulous);
   font-size: 40px;
   font-style: normal;
@@ -13739,7 +13736,7 @@ ul li:hover {
   color: #ffffff;
 }
 .programs-title h1 {
-  color: #e59bff;
+  color: white;
   font-family: var(--font-fabulous);
   font-size: 40px;
   font-style: normal;
@@ -13752,11 +13749,18 @@ ul li:hover {
   line-height: 25.734px;
 }
 .about-sio-para::first-letter {
-  color: #652a7a;
+  color: #e7427e;
   font-weight: bold;
   font-style: initial;
   font-family: var(--font-fabulous);
   font-size: 22px;
+}
+.about-gradient-img {
+  position: absolute;
+  z-index: 9;
+  background-image: url(/assets/images/Rectangle.png);
+  background-repeat: no-repeat;
+  background-position: right;
 }
 .work-shop-section {
   padding-bottom: 150px;
@@ -13793,7 +13797,7 @@ ul li:hover {
   margin-top: 22px;
   border-top: solid 0px #373737;
   border-bottom: solid 0px #373737;
-  border-left: solid 1px #373737;
+  border-left: solid 1px #7c7c7c;
   border-right: solid 0px #373737;
 }
 .no_border {
@@ -13807,8 +13811,7 @@ ul li:hover {
 @media (max-width: 600px) {
   .program_box {
     min-height: auto;
-
-    border-top: solid 1px #373737 !important;
+    border-top: solid 1px #7c7c7c !important;
     border-bottom: solid 0px #373737 !important;
     border-left: solid 0px #373737 !important;
     border-right: solid 0px #373737 !important;
@@ -14276,10 +14279,10 @@ ul li:hover {
   color: #fff;
   text-align: justify;
   font-family: var(--font-Nutino);
-  font-size: 19.5px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: 130%; /* 32.5px */
+  line-height: 150%; /* 32.5px */
   margin-top: 50px;
   width: 400px;
   height: auto;
