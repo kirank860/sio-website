@@ -10,10 +10,11 @@ const connectDB = require("./config/db");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config/.env" });
 
-var indexRouter = require("./routes/index");
+var indexRouter = require("./routes/index"); /*page from route*/
 var usersRouter = require("./routes/users");
 var aboutRouter = require("./routes/about");
 var contactRouter = require("./routes/contact");
+var eventRouter = require("./routes/event");
 var event_listRouter = require("./routes/event-list");
 var event_singleRouter = require("./routes/event-single");
 var scheduleRouter = require("./routes/schedule");
@@ -37,8 +38,7 @@ var Privacy = require("./routes/privacy");
 var Refund = require("./routes/refund");
 var Conditions = require("./routes/conditions");
 var AboutMlf = require("./routes/aboutMlf");
-var AboutBookPlus = require("./routes/aboutBookPlus");// ADDED NEWS ROUTES-------
-
+var AboutBookPlus = require("./routes/aboutBookPlus"); // ADDED NEWS ROUTES-------
 
 var app = express();
 
@@ -59,6 +59,7 @@ app.use("/uploads", express.static("uploads")); // Serve uploaded images
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/about", aboutRouter);
+app.use("/event", eventRouter); /*layout names*/
 app.use("/contact", contactRouter);
 app.use("/event-list", event_listRouter);
 app.use("/event-single", event_singleRouter);
