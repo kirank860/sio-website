@@ -133,6 +133,8 @@
           <div class="register-form">
             <div class="container">
 
+              <div id="alert-message" class="alert" style="display: none;"></div>
+
               <form action="/register" method="post" id="registerForm">
                 <div class="row">
                   <div class="col-md-6">
@@ -187,19 +189,9 @@
                     <div class="form-group">
                       <label for="professions">profession</label>
                       <select id="professions" name="profession" class="form-control scrollable-dropdown" required>
-                        <option value="education">Student</option>
-                        <option value="literature">Literature</option>
-                        <option value="research">Research</option>
-                        <option value="business">Business</option>
-                        <option value="art">Art</option>
-                        <option value="media">Media</option>
-                        <option value="film">Film</option>
-                        <option value="it">Information Technology</option>
-                        <option value="healthcare">Health Care</option>
-                        <option value="law">Law & Order</option>
-                        <option value="music">Music</option>
-                        <option value="ngo">NGO</option>
-                        <option value="public-service">Public Service</option>
+                        <option value="Student">Student</option>
+                        <option value="Research scholar">Research scholar</option>
+                        <option value="Teacher">Teacher</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -207,13 +199,19 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label for="day">Institute</label>
-                      <input type="text" class="form-control" required>
+                      <input type="text" id="institute" name="institute" class="form-control" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="intrest">Course</label>
-                      <select id="intrest" name="intrest" class="form-control scrollable-dropdown myDropDown" required>
+                      <label for="day">Place</label>
+                      <input type="text" id="place" name="place" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="course">Course</label>
+                      <select id="course" name="course" class="form-control scrollable-dropdown myDropDown" required>
                         <option value="Mechanical Engineering">Mechanical Engineering</option>
                         <option value="Civil Engineering">Civil Engineering</option>
                         <option value="Electrical Engineering">Electrical Engineering</option>
@@ -232,10 +230,16 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <!-- <div class="col-md-6">
                     <div class="form-group">
                       <label for="day">Date of Birth</label>
                       <input type="date" id="day" name="day" class="form-control" required>
+                    </div>
+                  </div> -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="day">Age</label>
+                      <input type="text" id="age" name="age" class="form-control" required>
                     </div>
                   </div>
                 </div>
@@ -291,5 +295,51 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
+<script>
+  $(document).ready(function() {
+    $("#registerForm").submit(function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Make an AJAX request to submit the form data
+      $.ajax({
+        type: "POST",
+        url: "/register", // Replace with the actual URL where your form is submitted
+        data: $(this).serialize(),
+        success: function(response) {
+          // Show a success message in the alert
+          $("#alert-message")
+            .removeClass("alert-danger")
+            .addClass("alert-success")
+            .text("Registration successful.")
+            .slideDown();
+
+          // Clear the form fields
+          $("#registerForm")[0].reset();
+
+          // Automatically hide the success message after 3 seconds
+          setTimeout(function() {
+            $("#alert-message").slideUp();
+          }, 3000); // 3000 milliseconds (3 seconds)
+        },
+        error: function(error) {
+          // Show an error message in the alert
+          $("#alert-message")
+            .removeClass("alert-success")
+            .addClass("alert-danger")
+            .text(error.responseText)
+            .slideDown();
+
+          // Automatically hide the error message after 3 seconds
+          setTimeout(function() {
+            $("#alert-message").slideUp();
+          }, 3000);
+        }
+      });
+    });
+  });
+</script>
+
+
 
 </html>

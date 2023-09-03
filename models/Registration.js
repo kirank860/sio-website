@@ -33,7 +33,7 @@ const RegistrationSchema = new mongoose.Schema(
     institution: {
       type: String,
     },
-    matterOfInterest: {
+    course: {
       type: String,
     },
     // regType: {
@@ -42,6 +42,12 @@ const RegistrationSchema = new mongoose.Schema(
     // },
     regDate: {
       type: Date,
+    },
+    age: {
+      type: String,
+    },
+    place: {
+      type: String,
     },
     regRef: {
       type: String,

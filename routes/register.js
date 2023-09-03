@@ -14,7 +14,7 @@ router.post("/", async function (req, res, next) {
     // Check if a user with the same email already exists
     const existingUser = await Registration.findOne({ email: req.body.email });
     if (existingUser) {
-      return res.status(400); //.json({ error: "Email already exists" });
+      return res.status(400).json("Already Registered With This Mail");
     }
 
     const newRegistration = new Registration({
@@ -24,8 +24,11 @@ router.post("/", async function (req, res, next) {
       email: req.body.email,
       district: req.body.location,
       profession: req.body.profession,
-      regDate: req.body.day,
-      matterOfInterest: req.body.intrest,
+      // regDate: req.body.day,
+      institution: req.body.institute,
+      place: req.body.place,
+      age: req.body.age,
+      course: req.body.course,
     });
 
     // Save the registration data to the database
