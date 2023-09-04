@@ -13597,7 +13597,7 @@ ul li:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  gap: 15px;
   margin-top: 20px;
 
   /* Adjust the gap between child divs */
@@ -13633,7 +13633,7 @@ ul li:hover {
   }
 
   .footer-malabar-img img {
-    width: 60%;
+    width: 80%;
     margin-top: 20px;
     padding: 5%;
   }
