@@ -107,9 +107,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: "#000";
-  background: #531768 !important;
 }
-
+#bg-color-purple {
+  background: #310441 !important;
+}
 body[dir="rtl"] {
   text-align: right;
 }
@@ -1731,13 +1732,17 @@ label {
 }
 
 .logo-white img {
-  width: 125px;
-}
-
-.logo-black img {
   width: 150px;
 }
-
+.logo-black img {
+  margin-top: 3px;
+  width: 200px;
+}
+@media (max-width: 600px) {
+  .logo-black img {
+    width: 150px;
+  }
+}
 /* .meeta-header-3
   .header-middle.sticky
   .header-wrap
@@ -2833,7 +2838,7 @@ label {
 /*  */
 .meeta-hero-section-3 {
   padding-top: 450px;
-  padding-bottom: 400px;
+  padding-bottom: 500px;
   position: relative;
   z-index: 4;
 }
@@ -3058,7 +3063,7 @@ label {
 
 @media only screen and (max-width: 575px) {
   .meeta-hero-section-3 {
-    padding-bottom: 170px;
+    padding-bottom: 200px;
   }
 
   .meeta-hero-section-3 .meeta-countdown-wrap {
@@ -13878,7 +13883,7 @@ ul li:hover {
   transition: all 400ms;
 }
 .c-card-testimonial .c-card-testimonial__description .c-card-testimonial__job {
-  color: var(--color-text-light);
+  color: white;
   font-family: var(--font-Nutino);
   font-size: 20px;
   font-style: normal;
@@ -13972,13 +13977,13 @@ ul li:hover {
     margin: 40px auto;
   }
   .c-testimonials__upcoming img {
-    width: 40%;
+    width: 50%;
     height: auto;
   }
   .c-testimonials__upcoming {
     position: absolute;
-    right: 0px;
-    top: 75px;
+    left: 30%;
+    top: -132px;
     z-index: 4;
   }
 }
@@ -14288,6 +14293,8 @@ ul li:hover {
   height: auto;
 }
 .events-title h1 {
+  margin-top: 10px;
+  margin-left: 15px;
   width: 100%;
   padding: 20px 0px;
   color: #e59bff;
@@ -14298,17 +14305,29 @@ ul li:hover {
   line-height: normal;
 }
 .event-primary {
-  margin-bottom: 1.3em;
-  color: white;
-  border-radius: 18px;
-  border: 1px solid rgba(216, 216, 216, 0);
-  background: radial-gradient(
-    221.82% 106.55% at 15.38% 30.26%,
-    rgba(101, 42, 122, 0.44) 0%,
-    rgba(231, 66, 126, 0) 100%
+  background-image: linear-gradient(
+    to right,
+    #aa076b 0%,
+    #61045f 51%,
+    #aa076b 100%
   );
-  backdrop-filter: blur(24.5px);
+  margin: 20px;
+  border-color: #c149b1;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
+
+.event-primary :hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 700px) {
   .major-items {
     margin: auto;
