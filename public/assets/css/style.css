@@ -12554,6 +12554,7 @@ li a {
   .delegate-table-section h1 {
     font-size: 30px !important;
     max-width: 100px;
+    margin-bottom: -20px;
   }
 
   .about-mlf-para p {
@@ -12889,6 +12890,7 @@ li a {
 }
 
 .delegate-table-section h1 {
+  margin-top: 40px;
   padding: 50px 0px;
   color: #e59bff;
   font-family: var(--font-fabulous);
