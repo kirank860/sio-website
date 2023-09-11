@@ -32,6 +32,7 @@ var Speaker = require("./routes/speaker");
 var Volunter = require("./routes/volunter");
 var Programe = require("./routes/programe");
 var News = require("./routes/news");
+var Deconquista = require("./routes/deconquista");
 
 // ADDED NEWS ROUTES-------
 var Privacy = require("./routes/privacy");
@@ -78,6 +79,7 @@ app.use("/speaker", Speaker);
 app.use("/volunter", Volunter);
 app.use("/programe", Programe);
 app.use("/news", News);
+app.use("/deconquista", Deconquista);
 
 // LATESTS-----
 app.use("/privacy", Privacy);

@@ -13743,25 +13743,24 @@ ul li:hover {
 }
 .about-sio-title {
   text-align: center;
-  color: white;
+  color: #ff4a8c;
   font-family: var(--font-fabulous);
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 600px) {
+  .about-sio-title {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 .title-para {
   padding: 0px 50px;
   color: #ffffff;
 }
-.programs-title h1 {
-  color: white;
-  font-family: var(--font-fabulous);
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+
 .about-sio-para {
   text-align: center;
   padding: 0px 70px;
@@ -14328,14 +14327,15 @@ ul li:hover {
   margin: 20px;
   border-color: #c149b1;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: 0.5s;
+  font-size: 14px;
+  font-weight: 100;
   background-size: 200% auto;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 30px;
 }
-
 .event-primary :hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
@@ -14450,4 +14450,165 @@ ul li:hover {
 .event-card {
   width: 23rem;
   border: 1px solid black;
+}
+
+/***** deconquista page *****/
+#deconquista-header {
+  padding: 1em;
+}
+.deconquista-img {
+  margin-top: 2em;
+}
+.deconquista-desc p {
+  margin-top: 2em;
+  color: #fff;
+  text-align: justify;
+  font-family: var(--font-Nutino);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 128.5%; /* 15.42px */
+}
+.conquista-btn {
+  text-align: center;
+}
+.deconquista-testimonial {
+  margin-top: 2em;
+}
+.c-card-testimonial__profile img {
+  margin-top: 0em;
+}
+.c-card-testimonial__deconquista {
+  color: #fff;
+  font-family: var(--font-Inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.c-card-testimonial__authorname {
+  margin-top: 20px;
+  color: #ff4a8c;
+  text-align: left;
+  font-family: var(--font-Inter);
+  font-size: 26.099px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 98.023%; /* 15.78px */
+}
+.c-card-testimonial__authorname p {
+  margin-top: 12px;
+  color: #fff;
+  font-family: var(--font-Inter);
+  font-size: 14.566px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* slider */
+
+@media (max-width: 600px) {
+  .c-card-testimonial__profile img {
+    margin-top: 4em;
+  }
+}
+
+/* slider */
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  margin-top: 2em;
+  padding: 5px 0;
+}
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card {
+  height: 350px;
+  padding: 20px 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 25px;
+  background: #fffdfd;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 3px 14px;
+}
+.image-content {
+  position: relative;
+  row-gap: 3px;
+  padding: 10px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+}
+.card-image {
+  position: relative;
+  left: 60px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #572f6f;
+}
+.name {
+  padding: 0.3em;
+  font-family: var(--font-Nutino);
+  color: grey;
+  font-size: 18.161px;
+  font-style: normal;
+  font-weight: 600;
+}
+.description {
+  padding: 0.3em;
+  width: auto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+.conquista-btn {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn-deconquista {
+  background-image: linear-gradient(
+    to right,
+    #aa076b 0%,
+    #61045f 51%,
+    #aa076b 100%
+  );
+  margin: 20px;
+  border-color: #c149b1;
+  text-align: center;
+  text-transform: capitalize;
+  transition: 0.5s;
+  font-size: 14px;
+  font-weight: 100;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 30px;
 }
