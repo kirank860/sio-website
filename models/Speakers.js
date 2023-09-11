@@ -1,25 +1,21 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const SpeakersSchema = new mongoose.Schema(
-    {
-        name: {
-            type: String,
-        },
-        designation: {
-            type: String,
-        },
-        description: {
-            type: String,
-        },
-        image: {
-            type: String,
-        },
-        active: {
-            type: Boolean,
-            default: null,
-        },
-    },
-    { timestamps: true }
-);
+// Define the Speaker schema
+const speakerSchema = new mongoose.Schema({
+  event: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Event', // Reference to the Event model
+    required: true,
+  },
+  photo: String,
+  name: {
+    type: String,
+    required: true,
+  },
+  designation: String,
+});
 
-module.exports = mongoose.model("Speakers", SpeakersSchema);
+// Create the Speaker model
+const Speaker = mongoose.model('Speaker', speakerSchema);
+
+module.exports = Speaker;
