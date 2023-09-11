@@ -33,6 +33,7 @@ var Volunter = require("./routes/volunter");
 var Programe = require("./routes/programe");
 var News = require("./routes/news");
 var Deconquista = require("./routes/deconquista");
+var Calender = require("./routes/calender");
 
 // ADDED NEWS ROUTES-------
 var Privacy = require("./routes/privacy");
@@ -80,6 +81,7 @@ app.use("/volunter", Volunter);
 app.use("/programe", Programe);
 app.use("/news", News);
 app.use("/deconquista", Deconquista);
+app.use("/calender", Calender);
 
 // LATESTS-----
 app.use("/privacy", Privacy);
