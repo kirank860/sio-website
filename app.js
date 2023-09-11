@@ -15,6 +15,10 @@ var usersRouter = require("./routes/users");
 var aboutRouter = require("./routes/about");
 var contactRouter = require("./routes/contact");
 var eventRouter = require("./routes/event");
+var eventAboutRouter = require("./routes/event_about");
+var eventThemeRouter = require("./routes/event_theme");
+var eventGuestRouter = require("./routes/event_guest");
+var eventFAQsRouter = require("./routes/event_FAQs");
 var event_listRouter = require("./routes/event-list");
 var event_singleRouter = require("./routes/event-single");
 var scheduleRouter = require("./routes/schedule");
@@ -32,6 +36,8 @@ var Speaker = require("./routes/speaker");
 var Volunter = require("./routes/volunter");
 var Programe = require("./routes/programe");
 var News = require("./routes/news");
+var Deconquista = require("./routes/deconquista");
+var Calender = require("./routes/calender");
 
 // ADDED NEWS ROUTES-------
 var Privacy = require("./routes/privacy");
@@ -60,6 +66,10 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/about", aboutRouter);
 app.use("/event", eventRouter); /*layout names*/
+app.use("/event_about", eventAboutRouter);
+app.use("/event_theme", eventThemeRouter);
+app.use("/event_guest", eventGuestRouter);
+app.use("/event_FAQs", eventFAQsRouter);
 app.use("/contact", contactRouter);
 app.use("/event-list", event_listRouter);
 app.use("/event-single", event_singleRouter);
@@ -78,6 +88,8 @@ app.use("/speaker", Speaker);
 app.use("/volunter", Volunter);
 app.use("/programe", Programe);
 app.use("/news", News);
+app.use("/deconquista", Deconquista);
+app.use("/calender", Calender);
 
 // LATESTS-----
 app.use("/privacy", Privacy);

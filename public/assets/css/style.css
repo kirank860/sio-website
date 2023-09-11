@@ -13141,7 +13141,7 @@ figcaption {
 
 .speakers-details {
   padding: 40px 0px;
-  margin-top: 130px;
+  /* margin-top: 130px; */
   /* border: 1px solid black; */
 }
 
@@ -13559,9 +13559,9 @@ html body .hide {
   );
 }
 
-ul li:hover {
+/* ul li:hover {
   color: #000000;
-}
+} */
 
 .icons span {
   margin: 20px;
@@ -13625,6 +13625,9 @@ ul li:hover {
 
 /* Responsive adjustments for screens below 700px */
 @media (max-width: 700px) {
+  .call-papers img {
+    width: 90% !important;
+  }
   .icons span {
     margin: 10px;
   }
@@ -13743,25 +13746,24 @@ ul li:hover {
 }
 .about-sio-title {
   text-align: center;
-  color: white;
+  color: #ff4a8c;
   font-family: var(--font-fabulous);
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 600px) {
+  .about-sio-title {
+    font-size: 30px;
+    text-align: center;
+  }
 }
 .title-para {
   padding: 0px 50px;
   color: #ffffff;
 }
-.programs-title h1 {
-  color: white;
-  font-family: var(--font-fabulous);
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+
 .about-sio-para {
   text-align: center;
   padding: 0px 70px;
@@ -14328,14 +14330,15 @@ ul li:hover {
   margin: 20px;
   border-color: #c149b1;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: 0.5s;
+  font-size: 14px;
+  font-weight: 100;
   background-size: 200% auto;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 30px;
 }
-
 .event-primary :hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
@@ -14343,6 +14346,49 @@ ul li:hover {
 }
 
 @media (max-width: 700px) {
+  .event-content-head-title p strong {
+    font-size: 17px !important;
+  }
+  .event-content-para p {
+    color: #fff;
+    line-height: normal;
+    padding-top: 2px !important;
+    font-size: 12px !important;
+  }
+  .know-more-btn {
+    text-align: center;
+    margin-top: 5px !important;
+  }
+  .know-more-btn button {
+    padding: 2px 18px !important;
+    border-radius: 5px !important;
+    border: 1px solid #c149b1;
+    background-color: transparent;
+    font-size: 12px !important;
+    color: #fff;
+    font-family: var(--font-fabulous);
+  }
+  .event-img img {
+    border-radius: 20px;
+    width: 28rem !important;
+    height: auto !important;
+    padding-top: 40px !important;
+  }
+  .event-box-section {
+    padding: 0px !important;
+    position: relative;
+    display: flex;
+  }
+  .event-content {
+    padding: 30px 10px !important;
+  }
+  .event-box {
+    width: 23rem;
+    border: 1px solid #8161bf;
+    border-radius: 30px;
+    margin: 10px auto !important;
+    overflow: hidden;
+  }
   .major-items {
     margin: auto;
     width: 100%;
@@ -14366,6 +14412,19 @@ ul li:hover {
   .events-title h1 {
     text-align: center;
     font-size: 30px;
+  }
+  .event-nav {
+    padding: 26px 5px !important;
+  }
+  .event-about-para {
+    padding: 20px 20px !important;
+    text-align: center;
+  }
+  .theme-contents {
+    padding: 10px 40px !important;
+  }
+  .FAQs-content {
+    padding: 10px 40px !important;
   }
 }
 /***** End major themes *****/
@@ -14436,6 +14495,7 @@ ul li:hover {
 /* event-section------ */
 .events-page-main {
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 .event-title h1 {
   text-align: center;
@@ -14447,7 +14507,390 @@ ul li:hover {
 .event-cards-sections {
   display: flex;
 }
-.event-card {
+.event-box {
+  background-color: #43264e;
   width: 23rem;
-  border: 1px solid black;
+  height: auto;
+  border: 1px solid #cdb3ff;
+  border-radius: 30px;
+  margin: 10px;
+  overflow: hidden;
 }
+.event-box-section {
+  padding: 35px;
+  position: relative;
+}
+.event-img img {
+  border-radius: 20px;
+  width: 19rem;
+  height: 21rem;
+  padding-top: 10px;
+}
+.event-content-head-title p {
+  color: #fff;
+  line-height: normal;
+  padding-top: 15px;
+}
+.event-content-head-title p strong {
+  font-family: var(--font-fabulous);
+}
+.event-content-para p {
+  color: #fff;
+  line-height: normal;
+  padding-top: 15px;
+}
+.know-more-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+.know-more-btn button {
+  padding: 10px 45px;
+  border-radius: 15px;
+  border: 1px solid #c149b1;
+  background-color: transparent;
+  font-size: 20px;
+  color: #fff;
+  font-family: var(--font-fabulous);
+}
+
+.workshop button {
+  position: absolute;
+  top: 0;
+  left: 27%;
+  border: none;
+  padding: 2px 50px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  color: #fff;
+}
+.event-about-section {
+  padding-top: 100px;
+}
+.call-papers {
+  text-align: center;
+}
+.call-papers img {
+  width: 50%;
+}
+.event-nav {
+  padding: 20px 300px;
+}
+.event-nav ul {
+  font-family: var(--font-Nutino);
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  border: 1px solid #cdb3ff;
+  border-radius: 10px;
+  padding: 10px 0px;
+  background-color: #43264e;
+}
+.event-nav ul li.active {
+  border-bottom: 2px solid #ff629b; /* Add a pink underline to the active item */
+}
+.event-about-para {
+  padding: 20px 200px;
+}
+.event-about-para p {
+  font-weight: normal;
+  color: #fff;
+  font-family: var(--font-Nutino);
+}
+.event-date h5 {
+  padding-top: 50px;
+  text-align: center;
+  font-family: var(--font-Nutino);
+  color: #fff;
+}
+.event-enroll {
+  text-align: center;
+  padding: 40px 0px;
+}
+.event-enroll button {
+  padding-top: 50px;
+  font-weight: 600;
+  color: #fff;
+  padding: 5px 90px;
+  border: 1px solid #c149b1;
+  border-radius: 10px;
+  background-color: #43264e;
+}
+.theme-contents {
+  padding: 10px 200px;
+}
+.FAQs-content {
+  padding: 10px 200px;
+}
+.FAQs-content p {
+  color: gray;
+}
+
+/***** deconquista page *****/
+#deconquista-header {
+  padding: 1em;
+}
+.deconquista-img {
+  margin-top: 2em;
+}
+.deconquista-desc p {
+  margin-top: 2em;
+  color: #fff;
+  text-align: justify;
+  font-family: var(--font-Nutino);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 128.5%; /* 15.42px */
+}
+.conquista-btn {
+  text-align: center;
+}
+.deconquista-testimonial {
+  margin-top: 2em;
+}
+.c-card-testimonial__profile img {
+  margin-top: 0em;
+}
+.c-card-testimonial__deconquista {
+  color: #fff;
+  font-family: var(--font-Inter);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.c-card-testimonial__authorname {
+  margin-top: 20px;
+  color: #ff4a8c;
+  text-align: left;
+  font-family: var(--font-Inter);
+  font-size: 26.099px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 98.023%; /* 15.78px */
+}
+.c-card-testimonial__authorname p {
+  margin-top: 12px;
+  color: #fff;
+  font-family: var(--font-Inter);
+  font-size: 14.566px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* slider */
+
+@media (max-width: 600px) {
+  .c-card-testimonial__profile img {
+    margin-top: 4em;
+  }
+}
+
+/* slider */
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  margin-top: 2em;
+  padding: 5px 0;
+}
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card {
+  height: 350px;
+  padding: 20px 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 25px;
+  background: white;
+  opacity: 1;
+  text-align: center;
+}
+.card:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+.image-content,
+.card-content {
+  flex-direction: column;
+  align-items: start;
+  padding: 3px 14px;
+  text-align: center;
+}
+.card-content h2 {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+.image-content {
+  position: relative;
+  row-gap: 3px;
+  padding: 10px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+}
+.card-image {
+  position: relative;
+  left: 60px;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #572f6f;
+}
+.name {
+  padding: 0.3em;
+  font-family: var(--font-Nutino);
+  color: grey;
+  font-size: 18.161px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+}
+.description {
+  padding: 0.3em;
+  width: auto;
+  text-align: center;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+.conquista-btn {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn-deconquista {
+  background-image: linear-gradient(
+    to right,
+    #aa076b 0%,
+    #61045f 51%,
+    #aa076b 100%
+  );
+  margin: 20px;
+  border-color: #c149b1;
+  text-align: center;
+  text-transform: capitalize;
+  transition: 0.5s;
+  font-size: 14px;
+  font-weight: 100;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/***** calender cards *****/
+.calender-cards-items {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.calender-cards {
+  padding: 25px;
+  width: 200px;
+  height: 120px;
+  border-radius: 14.418px;
+  border: 0.5px solid white;
+  background: radial-gradient(
+    234.84% 141.59% at 0.9% 2.98%,
+    rgba(205, 179, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(6.895522117614746px);
+}
+.calender-cards h3 {
+  text-align: center;
+  color: #fff;
+  font-family: var(--font-Nutino);
+  font-size: 16.836px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 130%; /* 10.187px */
+}
+.calender-cards p {
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-fabulous);
+  font-size: 40.481px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.calender-desc p {
+  color: #fff;
+  font-family: var(--font-Nutino);
+  font-size: 18.836px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 130%; /* 10.187px */
+  margin-bottom: 20px;
+}
+.calender-desc h2 {
+  margin-bottom: 20px;
+  width: 300px;
+  color: #fff;
+  font-family: var(--font-fabulous);
+  font-size: 32.768px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 103.5%;
+}
+@media (max-width: 768px) {
+  .calender-cards {
+    padding: 20px;
+    width: 100px;
+    height: auto;
+  }
+  .calender-cards h3 {
+    font-size: 12.836px;
+  }
+  .calender-cards p {
+    font-size: 30.481px;
+  }
+  .calender-desc p {
+    color: #fff;
+    font-family: var(--font-Nutino);
+    font-size: 14.836px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 130%; /* 10.187px */
+    margin-bottom: 20px;
+  }
+  .calender-desc h2 {
+    margin-bottom: 20px;
+    width: 150px;
+    color: #fff;
+    font-family: var(--font-fabulous);
+    font-size: 16.768px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 103.5%;
+  }
+}
+/***** End calender cards *****/
