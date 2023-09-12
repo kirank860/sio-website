@@ -1,20 +1,30 @@
-var express = require("express");
-const News = require("../models/News");
-var router = express.Router();
+const router = require("express").Router();
+// Controllers
+const {
+    createNews,
+    getNews,
+    updateNews,
+    deleteNews,
+    // getByFranchise,
+} = require("../controllers/news");
+// Middleware
+const { protect, authorize } = require("../middleware/auth");
+const { reqFilter } = require("../middleware/filter");
+const { getS3Middleware } = require("../middleware/s3client");
+const getUploadMiddleware = require("../middleware/upload");
 
-/* GET home page. */
-router.get("/", async function (req, res, next) {
-  try {
-    // const id = req.params.id;
-    // console.log(id);
-    const newsData = await News.find();
-    // const news = await News.find();
-    console.log(newsData);
-    // newsData, news
-    res.render("news", { title: "Express", newsData });
-  } catch (error) {
-    console.error(error);
-  }
-});
+router
+    .route("/")
+    .post(
+        getUploadMiddleware("uploads/news", ["image"]),
+        getS3Middleware(["image"]),
+        createNews
+    )
+    .get(reqFilter, getNews)
+    .put(
+        getUploadMiddleware("uploads/news", ["image"]),
+        getS3Middleware(["image"]), updateNews
+    )
+    .delete(deleteNews);
 
 module.exports = router;
