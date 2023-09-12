@@ -1,5 +1,4 @@
 const express = require("express");
-const AboutUs = require("../../models/aboutUs");
 const Speakers = require("../../models/Speaker");
 const News = require("../../models/news");
 const Testimonial = require("../../models/testimonial");
@@ -10,7 +9,6 @@ router.get("/", async function (req, res, next) {
   try {
     const title = "Welcome to My Website";
 
-    const aboutData = await AboutUs.find();
 
     const speakerData = await Speakers.find();
 
@@ -20,7 +18,6 @@ router.get("/", async function (req, res, next) {
     console.log(testimonialData);
     res.render("index", {
       title,
-      aboutData,
       speakerData,
       newsData,
       testimonialData,
