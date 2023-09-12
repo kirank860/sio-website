@@ -1,5 +1,5 @@
 const { default: mongoose } = require("mongoose");
-const Faq = require("../models/faq");
+const Faq = require("../models/Faq");
 
 // @desc      CREATE FAQ
 // @route     POST /api/v1/faq

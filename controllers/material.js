@@ -1,64 +1,60 @@
 const { default: mongoose } = require("mongoose");
-const AboutUs = require("../models/aboutUs");
+const Speakers = require("../models/material");
 
-// @desc      CREATE ABOUTUS
-// @route     POST /api/v1/about-us
+// @desc      CREATE NEW SPEAKERS
+// @route    eMaterial POST /api/v1/speakers
 // @access    private
-exports.createAboutUs = async (req, res) => {
+exports.createMaterial = async (req, res) => {
   try {
-    const response = await AboutUs.create(req.body);
+    const newSpeakers = await Speakers.create(req.body);
     res.status(200).json({
       success: true,
-      message: "Successfully added about us",
-      response,
+      message: "Speakers created successfully",
+      data: newSpeakers,
     });
-    console.log(response);
   } catch (err) {
     console.log(err);
-    res.status(400).json({
+    res.status(500).json({
       success: false,
-      message: err.toString(),
+      message: "Internal server error",
     });
   }
 };
 
-// @desc      GET ABOUTUS
-// @route     GET /api/v1/about-us
+// @desc      GET SPEAKERS
+// @route     GET /api/v1/speakers/:id
 // @access    private
-exports.getAboutUs = async (req, res) => {
+exports.getMaterial = async (req, res) => {
   try {
     const { id, skip, limit, searchkey } = req.query;
     if (id && mongoose.isValidObjectId(id)) {
-      const response = await AboutUs.findById(id);
+      const response = await Speakers.findById(id);
       return res.status(200).json({
         success: true,
-        message: `Retrieved specific about us`,
+        message: `Retrieved specific speakers`,
         response,
       });
     }
-    // const query = searchkey
-    //   ? { ...req.filter, title: { $regex: searchkey, $options: "i" } }
-    //   : req.filter;
     const query = {
       ...req.filter,
       ...(searchkey && {
         $or: [
-          { vision: { $regex: searchkey, $options: "i" } },
-          { mission: { $regex: searchkey, $options: "i" } },
+          { name: { $regex: searchkey, $options: "i" } },
+          { designation: { $regex: searchkey, $options: "i" } },
         ],
       }),
     };
-
     const [totalCount, filterCount, data] = await Promise.all([
-      parseInt(skip) === 0 && AboutUs.countDocuments(),
-      parseInt(skip) === 0 && AboutUs.countDocuments(query),
-      AboutUs.find(query)
+      parseInt(skip) === 0 && Speakers.countDocuments(),
+      parseInt(skip) === 0 && Speakers.countDocuments(query),
+      Speakers.find(query)
+        // .populate("franchise")
         .skip(parseInt(skip) || 0)
         .limit(parseInt(limit) || 50),
     ]);
     res.status(200).json({
       success: true,
-      message: `Retrieved all about us`,
+      message: `Retrieved all speakers`,
       response: data,
       count: data.length,
       totalCount: totalCount || 0,
@@ -66,24 +62,24 @@ exports.getAboutUs = async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(400).json({
+    res.status(204).json({
       success: false,
       message: err.toString(),
     });
   }
 };
 
-// @desc      UPDATE ABOUTUS
-// @route     PUT /api/v1/about-us
+// @desc      UPDATE SPECIFIC SPEAKERS
+// @route     PUT /api/v1/speakers/:id
 // @access    private
-exports.updateAboutUs = async (req, res) => {
+exports.updateMaterial = async (req, res) => {
   try {
-    const response = await AboutUs.findByIdAndUpdate(req.body.id, req.body, {
+    const response = await Speakers.findByIdAndUpdate(req.body.id, req.body, {
       new: true,
     });
     res.status(200).json({
       success: true,
-      message: "Updated specific about us",
+      message: "Updated specific speakers",
       enrollment: response,
     });
   } catch (err) {
@@ -95,23 +91,23 @@ exports.updateAboutUs = async (req, res) => {
   }
 };
 
-// @desc      DELETE ABOUTUS
-// @route     DELETE /api/v1/about-us
+// @desc      DELETE SPECIFIC SPEAKERS
+// @route     DELETE /api/v1/speakers/:id
 // @access    private
-exports.deleteAboutUs = async (req, res) => {
+exports.deleteMaterial = async (req, res) => {
   try {
-    const aboutus = await AboutUs.findByIdAndDelete(req.query.id);
+    const speakers = await Speakers.findByIdAndDelete(req.query.id);
 
-    if (!aboutus) {
+    if (!speakers) {
       return res.status(404).json({
         success: false,
-        message: "About us not found",
+        message: "Speakers not found",
       });
     }
 
     res.status(200).json({
       success: true,
-      message: "About us deleted successfully",
+      message: "Speakers deleted successfully",
     });
   } catch (err) {
     console.log(err);
