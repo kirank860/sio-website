@@ -1,6 +1,5 @@
 const { default: mongoose } = require("mongoose");
 const Event = require("../models/event");
-const AboutUs = require("../models/aboutUs");
 
 // @desc      CREATE NEW EVENT
 // @route     POST /api/v1/event
