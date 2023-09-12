@@ -50,7 +50,6 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 var indexRouter = require("./routes/ejsRoutes/indexEjs"); /*page from route*/
-var aboutRouter = require("./routes/ejsRoutes/aboutEjs");
 var contactRouter = require("./routes/ejsRoutes/contactEjs");
 var eventRouter = require("./routes/ejsRoutes/eventEjs");
 var eventAboutRouter = require("./routes/ejsRoutes/event_aboutEjs");
@@ -85,7 +84,6 @@ const appointment = require("./routes/appointment.js");
 const franchise = require("./routes/franchise.js");
 const dashboard = require("./routes/dashboard.js");
 const faq = require("./routes/faq.js");
-const aboutUs = require("./routes/aboutUs");
 const gallery = require("./routes/gallery");
 const news = require("./routes/news");
 const speakers = require("./routes/speakers");
@@ -103,7 +101,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static("uploads")); // Serve uploaded images
 
 app.use("/", indexRouter);
-app.use("/about", aboutRouter);
 app.use("/event", eventRouter); /*layout names*/
 app.use("/event_about", eventAboutRouter);
 app.use("/event_theme", eventThemeRouter);
@@ -138,7 +135,6 @@ app.use("/api/v1/appointment", appointment);
 app.use("/api/v1/franchise", franchise);
 app.use("/api/v1/dashboard", dashboard);
 app.use("/api/v1/faq", faq);
-app.use("/api/v1/about-us", aboutUs);
 app.use("/api/v1/gallery", gallery);
 app.use("/api/v1/news", news);
 app.use("/api/v1/speakers", speakers);
