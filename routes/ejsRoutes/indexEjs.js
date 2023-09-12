@@ -1,7 +1,7 @@
 const express = require("express");
-const Speakers = require("../../models/Speaker");
+// const Speakers = require("../../models/Speaker");
 // const News = require("../../models/news");
-const Testimonial = require("../../models/testimonial");
+// const Testimonial = require("../../models/testimonial");
 const router = express.Router();
 
 /* GET home page. */
@@ -13,13 +13,13 @@ router.get("/", async function (req, res, next) {
 
     // const newsData = await News.find();
 
-    const testimonialData = await Testimonial.find();
-    console.log(testimonialData);
+    // const testimonialData = await Testimonial.find();
+    // console.log(testimonialData);
     res.render("index", {
       title,
-      speakerData,
+      // speakerData,
       // newsData,
-      testimonialData,
+      // testimonialData,
     });
   } catch (error) {
     console.error("Error:", error);
