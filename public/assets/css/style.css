@@ -1367,6 +1367,7 @@ label {
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   z-index: 91;
   background-color: #ffff;
   border-bottom-color: #ffff;
@@ -1741,6 +1742,13 @@ label {
 @media (max-width: 600px) {
   .logo-black img {
     width: 150px;
+    margin: auto;
+  }
+  .logo-white img {
+    width: 120px;
+  }
+  .header-toggle {
+    display: none;
   }
 }
 /* .meeta-header-3
@@ -14494,15 +14502,17 @@ html body .hide {
 }
 /* event-section------ */
 .events-page-main {
-  padding-top: 100px;
+  padding-top: 30px;
   padding-bottom: 50px;
 }
 .event-title h1 {
   text-align: center;
   color: #ff4a8c;
-  font-size: 30px;
-  font-weight: 100px;
   font-family: var(--font-fabulous);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .event-cards-sections {
   display: flex;
@@ -14691,9 +14701,10 @@ html body .hide {
 
 /* slider */
 .slide-container {
+  margin-top: 1em;
   max-width: 1120px;
+  height: auto;
   width: 100%;
-  margin-top: 2em;
   padding: 5px 0;
 }
 .slide-content {
@@ -14810,6 +14821,7 @@ html body .hide {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  padding-bottom: 3em;
 }
 .calender-cards {
   padding: 25px;
@@ -14860,6 +14872,13 @@ html body .hide {
   font-style: normal;
   font-weight: 400;
   line-height: 103.5%;
+}
+.calender-chev {
+  border: 3.3px solid #8b2f87;
+  border-radius: 50%;
+}
+.calender-chev:hover {
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .calender-cards {
