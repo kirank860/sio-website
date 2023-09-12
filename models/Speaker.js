@@ -1,10 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // Define the Speaker schema
 const speakerSchema = new mongoose.Schema({
   event: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Event', // Reference to the Event model
+    ref: "Event", // Reference to the Event model
     required: true,
   },
   photo: String,
@@ -16,6 +16,6 @@ const speakerSchema = new mongoose.Schema({
 });
 
 // Create the Speaker model
-const Speaker = mongoose.model('Speaker', speakerSchema);
+const Speaker = mongoose.model("Speaker", speakerSchema);
 
 module.exports = Speaker;

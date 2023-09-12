@@ -12,14 +12,22 @@ const eventSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  theme: {
+    type: String,
+    required: true,
+  },
   venue: String,
   date: {
     type: Date,
     required: true,
   },
-  month: String,
+  month: {
+    type: String,
+    enum: ['September', 'October', 'November', 'December'],
+  },
+  
   isEnroll: Boolean,
-  theme: String,
+
   eventType: {
     type: String,
     enum: ["Seminar", "Workshop", "Reading Session"],
