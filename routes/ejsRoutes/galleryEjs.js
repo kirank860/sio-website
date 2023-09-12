@@ -1,5 +1,5 @@
 var express = require("express");
-const Gallery = require("../../models/gallery");
+// const Gallery = require("../../models/gallery");
 var router = express.Router();
 
 /* GET home page. */
