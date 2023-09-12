@@ -24,22 +24,21 @@
             </div>
             <!-- <div class="container"> -->
             <div class="row">
+              <% eventData.forEach(item=> { %>
               <div class="col-12 col-md-4  event-box">
                 <div class="event-box-section">
                   <div class="workshop">
                     <button>Workshop</button>
                   </div>
                   <div class="event-img">
-                    <img src="/assets/images/worshop.png" alt="">
+                    <img style="object-fit: cover;" src="<%= `https://event-manager.syd1.cdn.digitaloceanspaces.com/${ item.image}` %>" alt="">
                   </div>
                   <div class="event-content">
                     <div class="event-content-head-title">
-                      <p><span>One day Workshop on</span><br><strong style="font-size: 23px;">Islam as a Discursive
-                          Tradition</strong></p>
+                      <p><span>One day Workshop on</span><br><strong style="font-size: 23px;"><%= item.theme %></strong></p>
                     </div>
                     <div class="event-content-para">
-                      <p>Lead by T. Anees Ahamed 10 Sep2023,Sun 10:00 AM Venue: Chair for Islamic Studies and
-                        Research, Calicut University</p>
+                      <p><%= item.shortDescription %></p>
                     </div>
                     <div class="know-more-btn">
                       <a href="/event_about"> <button>Know More <i class="fas fa-arrow-right"></i></button></a>
@@ -47,121 +46,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-4  event-box">
-                <div class="event-box-section">
-                  <div class="workshop">
-                    <button>Workshop</button>
-                  </div>
-                  <div class="event-img">
-                    <img src="/assets/images/worshop.png" alt="">
-                  </div>
-                  <div class="event-content">
-                    <div class="event-content-head-title">
-                      <p><span>One day Workshop on</span><br><strong style="font-size: 23px;">Islam as a Discursive
-                          Tradition</strong></p>
-                    </div>
-                    <div class="event-content-para">
-                      <p>Lead by T. Anees Ahamed 10 Sep2023,Sun 10:00 AM Venue: Chair for Islamic Studies and
-                        Research, Calicut University</p>
-                    </div>
-                    <div class="know-more-btn">
-                      <a href="/event_about"> <button>Know More <i class="fas fa-arrow-right"></i></button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4  event-box">
-                <div class="event-box-section">
-                  <div class="workshop">
-                    <button>Workshop</button>
-                  </div>
-                  <div class="event-img">
-                    <img src="/assets/images/worshop.png" alt="">
-                  </div>
-                  <div class="event-content">
-                    <div class="event-content-head-title">
-                      <p><span>One day Workshop on</span><br><strong style="font-size: 23px;">Islam as a Discursive
-                          Tradition</strong></p>
-                    </div>
-                    <div class="event-content-para">
-                      <p>Lead by T. Anees Ahamed 10 Sep2023,Sun 10:00 AM Venue: Chair for Islamic Studies and
-                        Research, Calicut University</p>
-                    </div>
-                    <div class="know-more-btn">
-                      <a href="/event_about"> <button>Know More <i class="fas fa-arrow-right"></i></button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4  event-box">
-                <div class="event-box-section">
-                  <div class="workshop">
-                    <button>Workshop</button>
-                  </div>
-                  <div class="event-img">
-                    <img src="/assets/images/worshop.png" alt="">
-                  </div>
-                  <div class="event-content">
-                    <div class="event-content-head-title">
-                      <p><span>One day Workshop on</span><br><strong style="font-size: 23px;">Islam as a Discursive
-                          Tradition</strong></p>
-                    </div>
-                    <div class="event-content-para">
-                      <p>Lead by T. Anees Ahamed 10 Sep2023,Sun 10:00 AM Venue: Chair for Islamic Studies and
-                        Research, Calicut University</p>
-                    </div>
-                    <div class="know-more-btn">
-                      <a href="/event_about"> <button>Know More <i class="fas fa-arrow-right"></i></button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4  event-box">
-                <div class="event-box-section">
-                  <div class="workshop">
-                    <button>Workshop</button>
-                  </div>
-                  <div class="event-img">
-                    <img src="/assets/images/worshop.png" alt="">
-                  </div>
-                  <div class="event-content">
-                    <div class="event-content-head-title">
-                      <p><span>One day Workshop on</span><br><strong style="font-size: 23px;">Islam as a Discursive
-                          Tradition</strong></p>
-                    </div>
-                    <div class="event-content-para">
-                      <p>Lead by T. Anees Ahamed 10 Sep2023,Sun 10:00 AM Venue: Chair for Islamic Studies and
-                        Research, Calicut University</p>
-                    </div>
-                    <div class="know-more-btn">
-                      <a href="/event_about"> <button>Know More <i class="fas fa-arrow-right"></i></button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-4  event-box">
-                <div class="event-box-section">
-                  <div class="workshop">
-                    <button>Workshop</button>
-                  </div>
-                  <div class="event-img">
-                    <img src="/assets/images/worshop.png" alt="">
-                  </div>
-                  <div class="event-content">
-                    <div class="event-content-head-title">
-                      <p><span>One day Workshop on</span><br><strong style="font-size: 23px;">Islam as a Discursive
-                          Tradition</strong></p>
-                    </div>
-                    <div class="event-content-para">
-                      <p>Lead by T. Anees Ahamed 10 Sep2023,Sun 10:00 AM Venue: Chair for Islamic Studies and
-                        Research, Calicut University</p>
-                    </div>
-                    <div class="know-more-btn">
-                      <a href="/event_about"> <button>Know More <i class="fas fa-arrow-right"></i></button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <% }); %>
             </div>
 
           </div>
