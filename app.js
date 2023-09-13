@@ -15,6 +15,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
+  
   "https://lemon-grass-0c88ad110.3.azurestaticapps.net",
   "https://lively-wave-04701e810.3.azurestaticapps.net",
 ];
@@ -63,7 +64,7 @@ var Gallery = require("./routes/ejsRoutes/galleryEjs");
 var Faq = require("./routes/ejsRoutes/faqEjs");
 var Speaker = require("./routes/ejsRoutes/speakerEjs");
 var Programe = require("./routes/ejsRoutes/programeEjs");
-var News = require("./routes/ejsRoutes/newsEjs");
+var updateRouter = require("./routes/ejsRoutes/updatesEjs.js");
 var Deconquista = require("./routes/ejsRoutes/deconquistaEjs");
 var Calender = require("./routes/ejsRoutes/calenderEjs");
 
@@ -114,7 +115,7 @@ app.use("/gallery", Gallery);
 app.use("/faq", Faq);
 app.use("/speaker", Speaker);
 app.use("/programe", Programe);
-app.use("/news", News);
+app.use("/updates", updateRouter);
 app.use("/deconquista", Deconquista);
 app.use("/calender", Calender);
 
@@ -136,7 +137,7 @@ app.use("/api/v1/franchise", franchise);
 app.use("/api/v1/dashboard", dashboard);
 app.use("/api/v1/faq", faq);
 // app.use("/api/v1/gallery", gallery);
-app.use("/api/v1/news", news);
+// app.use("/api/v1/news", news);
 app.use("/api/v1/speakers", speakers);
 app.use("/api/v1/material", material);
 app.use("/api/v1/registration", registration);
