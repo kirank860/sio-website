@@ -10,45 +10,6 @@ const connectDB = require("./config/db.js");
 // Load env vars
 dotenv.config({ path: "./config/.env" });
 
-<<<<<<< HEAD
-var indexRouter = require("./routes/index"); /*page from route*/
-var usersRouter = require("./routes/users");
-var aboutRouter = require("./routes/about");
-var contactRouter = require("./routes/contact");
-var eventRouter = require("./routes/event");
-var eventAboutRouter = require("./routes/event_about");
-var eventThemeRouter = require("./routes/event_theme");
-var eventGuestRouter = require("./routes/event_guest");
-var eventFAQsRouter = require("./routes/event_FAQs");
-var event_listRouter = require("./routes/event-list");
-var event_singleRouter = require("./routes/event-single");
-var scheduleRouter = require("./routes/schedule");
-var Gallery = require("./routes/gallery");
-var register = require("./routes/register");
-var Faq = require("./routes/faq");
-var login = require("./routes/login");
-var Blog = require("./routes/blog");
-var Blog_News = require("./routes/blog-news");
-var Blog_Details = require("./routes/blog-details");
-var Attende = require("./routes/attende");
-var Delegate = require("./routes/delegate");
-var Student = require("./routes/student");
-var Speaker = require("./routes/speaker");
-var Volunter = require("./routes/volunter");
-var Programe = require("./routes/programe");
-var News = require("./routes/news");
-var Article = require("./routes/Article");
-var Deconquista = require("./routes/deconquista");
-var Calender = require("./routes/calender");
-
-// ADDED NEWS ROUTES-------
-var Privacy = require("./routes/privacy");
-var Refund = require("./routes/refund");
-var Conditions = require("./routes/conditions");
-var AboutMlf = require("./routes/aboutMlf");
-var AboutBookPlus = require("./routes/aboutBookPlus"); // ADDED NEWS ROUTES-------
-const Testimonial = require("./routes/testimonial");
-=======
 const app = express();
 
 const allowedOrigins = [
@@ -57,7 +18,6 @@ const allowedOrigins = [
   "https://lemon-grass-0c88ad110.3.azurestaticapps.net",
   "https://lively-wave-04701e810.3.azurestaticapps.net",
 ];
->>>>>>> origin/main
 
 //cors policy
 app.use(
@@ -103,7 +63,7 @@ var Gallery = require("./routes/ejsRoutes/galleryEjs");
 var Faq = require("./routes/ejsRoutes/faqEjs");
 var Speaker = require("./routes/ejsRoutes/speakerEjs");
 var Programe = require("./routes/ejsRoutes/programeEjs");
-var News = require("./routes/ejsRoutes/newsEjs");
+var Updates = require("./routes/ejsRoutes/updatesEjs.js");
 var Deconquista = require("./routes/ejsRoutes/deconquistaEjs");
 var Calender = require("./routes/ejsRoutes/calenderEjs");
 
@@ -154,9 +114,7 @@ app.use("/gallery", Gallery);
 app.use("/faq", Faq);
 app.use("/speaker", Speaker);
 app.use("/programe", Programe);
-app.use("/news", News);
-app.use("/Article", Article);
-app.use("/testimonial", Testimonial);
+app.use("/news", Updates);
 app.use("/deconquista", Deconquista);
 app.use("/calender", Calender);
 
