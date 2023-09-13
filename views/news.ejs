@@ -1,64 +1,9 @@
-<!doctype html>
-<html class="no-js" lang="en">
 
-
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Malabar Literature Festival </title>
-  <meta name="robots" content="noindex, follow" />
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/decon-logo.svg">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;600;700;800&amp;family=Open+Sans:wght@300;400;500;600;700;800&amp;display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Archivo:wght@300;400;500;600;700&amp;display=swap"
-    rel="stylesheet">
-
-  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
-
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-	============================================ -->
-
-  <!-- Icon Font CSS -->
-  <link rel="stylesheet" href="/assets/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/flaticon.css">
-
-  <!-- Plugins CSS -->
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="/assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="/assets/css/aos.css">
-  <link rel="stylesheet" href="/assets/css/nice-select.css">
-
-  <!-- Main Style CSS -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-
-  <!-- carousel Style CSS -->
-  <link rel="stylesheet" href="/assets/css/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
-  <link rel="stylesheet" href="/assets/css/css/style.css">
-</head>
-
+<!-- ========== Start header ========== -->
+<%-include("layouts/header.ejs")%>
+<!-- ========== End header ========== -->
 <body>
+<<<<<<< HEAD
   <div class="main-wrapper">
 
     <!-- Preloader start -->
@@ -166,6 +111,8 @@
 
 
     <!-- Offcanvas End -->
+=======
+>>>>>>> origin/main
     <div class="updates-section" id="bg-color-purple">
       <div class="header-programe" style="margin-top: 100px;">
         <div class="container">
@@ -193,43 +140,52 @@
 
       <div class="container">
         <div class="news-details">
-          <% newsData.forEach(newsData=> { %>
             <div class=" row news-details-head">
               <div class="col-12 col-xl-6 news-details-head-img">
 
+<<<<<<< HEAD
                 <img src="<%= `https://event-manager.syd1.cdn.digitaloceanspaces.com/${ newsData.image }` %>" alt=""
                   id="newsImage">
               </div>
               <div class="col-12 col-xl-6 ">
                 <h1 id="newsTitle">
                   <%= newsData.title %>
+=======
+                <img src="/assets/images/worshop.png" alt="">
+              </div>
+              <div class="col-12 col-xl-6 ">
+                <h1>
+                  sdjskjdvsnkjdn
+>>>>>>> origin/main
                 </h1>
                 <div class="dates" style="color: #fff;">
-                  <h6 style="display: inline; background-color: #E59BFF;">Latest</h6><span class="time"
+                  <h6 style="display: inline; background-color: #E59BFF;">Latest</h6>sdvsdvsdvsdvsvd<span class="time"
                     style="display: inline; padding-left: 10px;">32
                     MINUTES AGO</span>
                 </div>
+<<<<<<< HEAD
                 <p id="modalNewsDescription">
                   <%= newsData.description %>
+=======
+                <p>
+>>>>>>> origin/main
                 </p>
                 <!-- <div>
                 <a href="/news/<%= newsData._id %>"> <button class="readmore">Read More</button></a>
               </div> -->
               </div>
             </div>
-            <% }); %>
 
               <div class="row news-details-carousel" style="display: flex; margin-top: 50px;">
 
-                <% newsData.forEach(newsData=> { %>
 
                   <div class=" col-12 col-xl-4" id="bg-color-purple">
                     <img class="card-img-top"
-                      src="<%= `https://event-manager.syd1.cdn.digitaloceanspaces.com/${ newsData.image }` %>"
+                      src=""
                       alt="Card image cap" style="border-radius: 10px;">
                     <div class="card-body" style="color: #fff;">
                       <h5 class="card-title">
-                        <%= newsData.title %>
+                        
                       </h5>
                       <div class="dates" style="color: #fff;">
                         <h6 style="display: inline; background-color: #E59BFF;">Latest</h6><span class="time"
@@ -237,19 +193,23 @@
                           MINUTES AGO</span>
                       </div>
                       <P class="card-text-para">
-                        <%= newsData.description %>
+                        
                       </P>
+<<<<<<< HEAD
                       <!-- <div>
                         <a href="/news/<%= newsData._id %>"> <button class="readmore">Read More</button></a>
                       </div> -->
+=======
+                      <div>
+                        <a href="/news"> <button class="readmore">Read More</button></a>
+                      </div>
+>>>>>>> origin/main
                     </div>
                   </div>
-
-                  <% }); %>
-
               </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -330,51 +290,11 @@
                 class="fab fa-instagram"></i></a></span>
         </div>
       </div>
+=======
+>>>>>>> origin/main
     </div>
   </div>
-  <!-- Footer End -->
-
-  <!-- back to top start -->
-  <div class="progress-wrap">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-    </svg>
-  </div>
-  <!-- back to top end -->
-
-
-
-
-  <!-- JS
-  ============================================ -->
-
-  <!-- carousel & jQuery JS -->
-
-  <script src="../assets/js/js/jquery.min.js"></script>
-  <script src="../assets/js/js/owl.carousel.min.js"></script>
-  <script src="../assets/js/js/main.js"></script>
-
-  <!-- Modernizer & jQuery JS -->
-  <script src="../assets/js/vendor/modernizr-3.11.7.min.js"></script>
-  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-
-  <!-- Bootstrap JS -->
-  <script src="../assets/js/popper.min.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
-
-  <!-- Plugins JS -->
-  <script src="../assets/js/swiper-bundle.min.js"></script>
-  <script src="../assets/js/back-to-top.js"></script>
-  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="../assets/js/jquery.counterup.min.js"></script>
-  <script src="../assets/js/waypoints.min.js"></script>
-  <script src="../assets/js/aos.js"></script>
-  <script src="../assets/js/jquery.nice-select.min.js"></script>
-  <!-- Main JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
-  <script src="../assets/js/main.js"></script>
-
+<!-- ========== Start Section ========== -->
+<%-include("layouts/footer.ejs")%>
+<!-- ========== End Section ========== -->
 </body>
-
-</html>

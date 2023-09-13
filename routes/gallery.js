@@ -1,16 +1,30 @@
-var express = require("express");
-const Gallery = require("../models/Gallery");
-var router = express.Router();
+// const router = require("express").Router();
+// // Controllers
+// const {
+//     createGallery,
+//     getGallery,
+//     updateGallery,
+//     deleteGallery,
+//     // getByFranchise,
+// } = require("../controllers/gallery");
+// // Middleware
+// const { protect, authorize } = require("../middleware/auth");
+// const { reqFilter } = require("../middleware/filter");
+// const { getS3Middleware } = require("../middleware/s3client");
+// const getUploadMiddleware = require("../middleware/upload");
 
-/* GET home page. */
-router.get("/", async function (req, res, next) {
-  try {
-    const galleryData = await Gallery.find()
-    console.log(galleryData)
-    res.render("gallery",{galleryData});
-  } catch (error) {
-    console.error(error)
-  }
-});
+// router
+//     .route("/")
+//     .post(
+//         getUploadMiddleware("uploads/gallery", ["image"]),
+//         getS3Middleware(["image"]),
+//         createGallery
+//     )
+//     .get(reqFilter, getGallery)
+//     .put(
+//         getUploadMiddleware("uploads/gallery", ["image"]),
+//         getS3Middleware(["image"]), updateGallery
+//     )
+//     .delete(deleteGallery);
 
-module.exports = router;
+// module.exports = router;
