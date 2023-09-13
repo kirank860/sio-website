@@ -142,7 +142,30 @@
 
 
 
+    <!-- Offcanvas Start-->
+    <div class="bottombarContainer">
+      <a href="/">
+        <div class="bottomBarLink"><i class="fas fa-home"></i></div>
+      </a>
+      <a href="/event">
+        <div class="bottomBarLink"><i class="fas fa-calendar-alt"></i></div>
+      </a>
+      <a href="/news" aria-current="page" class="activeContainer">
+        <div class="bottomBarLink"><i class="fas fa-newspaper"></i></div>
+      </a>
+      <a href="/speaker">
+        <div class="bottomBarLink"><i class="fas fa-microphone"></i></div>
+      </a>
+      <a href="/contact">
+        <div class="bottomBarLink"><i class="fas fa-address-book"></i></div>
+      </a>
+      <a href="/register">
+        <div class="bottomBarLink"><i class="fas fa-user"></i></div>
+      </a>
+    </div>
 
+
+    <!-- Offcanvas End -->
     <div class="updates-section" id="bg-color-purple">
       <div class="header-programe" style="margin-top: 100px;">
         <div class="container">
@@ -151,10 +174,18 @@
           </div>
           <div class="updates-menu">
             <ul>
-              <li>News</li>
-              <li>Archive</li>
-              <li>Testimonial</li>
-              <li>Gallery</li>
+              <a href="/news">
+                <li class="active">News</li>
+              </a>
+              <a href="/Article">
+                <li>Article</li>
+              </a>
+              <a href="/testimonial">
+                <li>Testimonial</li>
+              </a>
+              <a href="/gallery">
+                <li>Gallery</li>
+              </a>
             </ul>
           </div>
         </div>
@@ -166,19 +197,20 @@
             <div class=" row news-details-head">
               <div class="col-12 col-xl-6 news-details-head-img">
 
-                <img src="<%= `https://event-manager.syd1.cdn.digitaloceanspaces.com/${ newsData[0].image }` %>" alt="">
+                <img src="<%= `https://event-manager.syd1.cdn.digitaloceanspaces.com/${ newsData.image }` %>" alt=""
+                  id="newsImage">
               </div>
               <div class="col-12 col-xl-6 ">
-                <h1>
-                  <%= newsData[0].title %>
+                <h1 id="newsTitle">
+                  <%= newsData.title %>
                 </h1>
                 <div class="dates" style="color: #fff;">
                   <h6 style="display: inline; background-color: #E59BFF;">Latest</h6><span class="time"
                     style="display: inline; padding-left: 10px;">32
                     MINUTES AGO</span>
                 </div>
-                <p>
-                  <%= newsData[0].description %>
+                <p id="modalNewsDescription">
+                  <%= newsData.description %>
                 </p>
                 <!-- <div>
                 <a href="/news/<%= newsData._id %>"> <button class="readmore">Read More</button></a>
@@ -191,7 +223,7 @@
 
                 <% newsData.forEach(newsData=> { %>
 
-                  <div class="card" style="width: 18rem;" id="bg-color-purple">
+                  <div class=" col-12 col-xl-4" id="bg-color-purple">
                     <img class="card-img-top"
                       src="<%= `https://event-manager.syd1.cdn.digitaloceanspaces.com/${ newsData.image }` %>"
                       alt="Card image cap" style="border-radius: 10px;">
@@ -199,18 +231,17 @@
                       <h5 class="card-title">
                         <%= newsData.title %>
                       </h5>
-                      <ul style="list-style: none; padding-left: 0;">
-                        <li style="display: inline;"> <span style="font-size: 20px; color: #49BDF2;">&bull;</span> 32
-                          MINUTES
-                          AGO
-                        </li>
-                      </ul>
+                      <div class="dates" style="color: #fff;">
+                        <h6 style="display: inline; background-color: #E59BFF;">Latest</h6><span class="time"
+                          style="display: inline; padding-left: 10px;">32
+                          MINUTES AGO</span>
+                      </div>
                       <P class="card-text-para">
                         <%= newsData.description %>
                       </P>
-                      <div>
+                      <!-- <div>
                         <a href="/news/<%= newsData._id %>"> <button class="readmore">Read More</button></a>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
 
@@ -219,7 +250,14 @@
               </div>
         </div>
       </div>
-
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img src="" alt="News Image" id="modalNewsImage">
+          <h1 id="modalNewsTitle"></h1>
+          <p id="modalNewsDescription"></p>
+        </div>
+      </div>
 
     </div>
   </div>

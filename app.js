@@ -36,6 +36,7 @@ var Speaker = require("./routes/speaker");
 var Volunter = require("./routes/volunter");
 var Programe = require("./routes/programe");
 var News = require("./routes/news");
+var Article = require("./routes/Article");
 var Deconquista = require("./routes/deconquista");
 var Calender = require("./routes/calender");
 
@@ -45,6 +46,7 @@ var Refund = require("./routes/refund");
 var Conditions = require("./routes/conditions");
 var AboutMlf = require("./routes/aboutMlf");
 var AboutBookPlus = require("./routes/aboutBookPlus"); // ADDED NEWS ROUTES-------
+const Testimonial = require("./routes/testimonial");
 
 var app = express();
 
@@ -88,6 +90,8 @@ app.use("/speaker", Speaker);
 app.use("/volunter", Volunter);
 app.use("/programe", Programe);
 app.use("/news", News);
+app.use("/Article", Article);
+app.use("/testimonial", Testimonial);
 app.use("/deconquista", Deconquista);
 app.use("/calender", Calender);
 
