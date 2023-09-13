@@ -63,7 +63,7 @@ var Gallery = require("./routes/ejsRoutes/galleryEjs");
 var Faq = require("./routes/ejsRoutes/faqEjs");
 var Speaker = require("./routes/ejsRoutes/speakerEjs");
 var Programe = require("./routes/ejsRoutes/programeEjs");
-var News = require("./routes/ejsRoutes/newsEjs");
+var Updates = require("./routes/ejsRoutes/updatesEjs.js");
 var Deconquista = require("./routes/ejsRoutes/deconquistaEjs");
 var Calender = require("./routes/ejsRoutes/calenderEjs");
 
@@ -114,7 +114,7 @@ app.use("/gallery", Gallery);
 app.use("/faq", Faq);
 app.use("/speaker", Speaker);
 app.use("/programe", Programe);
-app.use("/news", News);
+app.use("/news", Updates);
 app.use("/deconquista", Deconquista);
 app.use("/calender", Calender);
 

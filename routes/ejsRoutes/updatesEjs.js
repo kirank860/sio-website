@@ -4,7 +4,7 @@ var router = express.Router();
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   try {
-    res.render("news", { title: "Express" });
+    res.render("updates");
   } catch (error) {
     console.error(error);
   }
