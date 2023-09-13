@@ -9,7 +9,7 @@ router.get("/", async function (req, res, next) {
   try {
     const title = "Welcome to My Website";
 
-    const speakerData = await Speakers.find();
+    // const speakerData = await Speakers.find();
 
     // const newsData = await News.find();
 
